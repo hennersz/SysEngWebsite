@@ -19,10 +19,31 @@
             border: 1px solid #F5F5F5;
             background-color: #FFFFFF;
         }
-        #maindrawer {
+        #maindrawer  {
             background-color: #FAFAFA;
         }
-    </style>
+        .img-circle {
+                border-radius: 50%;
+                width:100%; /* you can use % */
+                height: auto;
+        }
+        .profileText {
+            text-align: center;
+        }
+        .profile {
+            width:40%;
+            display:inline-block;
+        } 
+        .title {
+            text-align: center;
+        }
+        #profileLeft{
+            margin-left:5%;
+        }
+        #profileRight{
+            margin-left:10%;
+        }
+        </style>
         <paper-drawer-panel force-narrow disable-edge-swipe>
             <paper-header-panel id="menudrawer" mode="waterfall" class="flex" drawer>
                 <paper-toolbar header id="menu-toolbar">
@@ -31,26 +52,88 @@
                 <div class="container">
                     <paper-menu selected="{{route}}" valueattr="data-route">
                         <paper-item data-route="home">Home</paper-item>
-                        <paper-item data-route="project">Project Information</paper-item>
-                        <paper-item data-route="team">The Team</paper-item>
+                        <paper-item data-route="Background">Background</paper-item>
+                        <paper-item data-route="Requirements">Requirements</paper-item>
+                        <paper-item data-route="Research">Research</paper-item>
+                        <paper-item data-route="Prototypes">Prototypes</paper-item>
+                        <paper-item data-route="Git">Git Repository</paper-item>
+                        <paper-item data-route="Testing">Testing</paper-item>
+                        <paper-item data-route="Records">Meetings and Bi-weekly Reports</paper-item>
+                        <paper-item data-route="Plan">Plan for term 2</paper-item>
+                        
                     </paper-menu>
                 </div>
             </paper-header-panel>
-            <paper-header-panel id="maindrawer" mode="waterfall-tall" tall-class="medium-tall" main>
+            <paper-header-panel id="maindrawer" mode="waterfall" main>
                 <paper-toolbar role="tool" id="info-toolbar">
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                    <div class="bottom title">Wearables Project Website Template</div>
+                    <div class="bottom title">Team 15 - INTEL1 Wearables project website</div>
                 </paper-toolbar>
                 <div class="content flex" id="content">
                     <iron-pages selected="{{route}}" valueattr="data-route" id="selector">
                         <section data-route="home">
-                            <h3>Hello and welcome to our website!</h3>
+                            <div class="title">
+                                <h3>The Team</h3>
+                            </div>
+                            <div class="profile" id="profileLeft">
+                                <img class="img-circle" src="./images/mingqian.jpg"/>
+                                <div class="profileText">
+                                    <h4>Minqian Wang</h4>
+                                </div>
+                            </div>
+                            <div class="profile" id="profileRight">
+                                <img class="img-circle" src="./images/henry.jpg"/>
+                                <div class="profileText">
+                                    <h4>Henry Mortimer</h4>
+                                </div>
+                            </div>
+ 
                         </section>
-                        <section data-route="project">
-                            <h3>Project Page</h3>
+                        <section data-route="Background">
+                            <div class="title">
+                                <h3>Background</h3>
+                            </div>
+                            <p>
+                                Nearly 9,500 people die in London every year due to long term exposure to air pollution. For the past 5 years London has been in breach of the EU NO2 safety limit. Because of this we have been tasked to design a smartwatch app that gets up to date data about the levels of air pollution as well as other forms of pollution so people can make more informed decisions about where in the city they go. Our clients are Nicolai Marquardt and Steve Houben. 
+                            </p> 
                         </section>
-                        <section data-route="team">
-                            <h3>Team Page</h3>
+                        <section data-route="Requirements">
+                            <div class="title">
+                                <h3>Requirements</h3>
+                            </div>
+                            Must:
+                            <ul>
+                                <li>
+                                    Use 3 pollution data sets updated at different rates ie live, daily, yearly
+                                </li>
+                                <li>
+                                    Display data visually on a smartwatch
+                                </li>
+                                <li>
+                                    Have a general view and a detailed view for each type of data
+                                </li>
+                                <li>
+                                    Interact with an android app
+                                </li>
+                            </ul>
+                        </section>
+                        <section data-route="Research">
+                            <h3>Reseearch</h3>
+                        </section>
+                         <section data-route="Prototypes">
+                            <h3>Prototypes</h3>
+                        </section>
+                        <section data-route="Git">
+                            <h3>Github</h3>
+                        </section>
+                        <section data-route="Testing">
+                            <h3>Testing</h3>
+                        </section>
+                        <section data-route="Records">
+                            <h3>Meetings and Bi-weekly Reports</h3>
+                        </section>
+                        <section data-route="Plan">
+                            <h3>Plan for term 2</h3>
                         </section>
                     </iron-pages>
                 </div>
