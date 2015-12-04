@@ -8,7 +8,7 @@
         }
 
         #menudrawer, paper-menu{
-            background-color: #FA7921;
+            background-color: #2a363b;
             color: #FFF;
         }
         .content {
@@ -18,9 +18,6 @@
             padding: 10px;
             border: 1px solid #F5F5F5;
             background-color: #FFFFFF;
-        }
-        #maindrawer  {
-            background-color: #FAFAFA;
         }
         .img-circle {
                 border-radius: 50%;
@@ -34,20 +31,24 @@
             width:40%;
             display:inline-block;
         } 
-        .title {
-            text-align: center;
-        }
         #profileLeft{
             margin-left:5%;
         }
         #profileRight{
             margin-left:10%;
         }
+        .pagetitle {
+            text-align:center;
+        }
+        paper-button.fancy {
+              background: #45ada8;
+              color:white;
+        }
         </style>
         <paper-drawer-panel force-narrow disable-edge-swipe>
             <paper-header-panel id="menudrawer" mode="waterfall" class="flex" drawer>
                 <paper-toolbar header id="menu-toolbar">
-                    <div class="title">Menu</div>
+                    <div class="title" id="menu" >Menu</div>
                 </paper-toolbar>
                 <div class="container">
                     <paper-menu selected="{{route}}" valueattr="data-route">
@@ -72,7 +73,7 @@
                 <div class="content flex" id="content">
                     <iron-pages selected="{{route}}" valueattr="data-route" id="selector">
                         <section data-route="home">
-                            <div class="title">
+                            <div class="pagetitle">
                                 <h3>The Team</h3>
                             </div>
                             <div class="profile" id="profileLeft">
@@ -90,7 +91,7 @@
  
                         </section>
                         <section data-route="Background">
-                            <div class="title">
+                            <div class="pagetitle">
                                 <h3>Background</h3>
                             </div>
                             <p>
@@ -98,10 +99,10 @@
                             </p> 
                         </section>
                         <section data-route="Requirements">
-                            <div class="title">
+                            <div class="pagetitle">
                                 <h3>Requirements</h3>
                             </div>
-                            Must:
+                            <h4>Must:</h4>
                             <ul>
                                 <li>
                                     Use 3 pollution data sets updated at different rates ie live, daily, yearly
@@ -115,6 +116,57 @@
                                 <li>
                                     Interact with an android app
                                 </li>
+                                <li>
+                                    Must update as the user moves round the city and periodically or when the user requests a refresh
+                                </li>
+                                <li>
+                                    Have a clear simple UI
+                                </li>
+                            </ul>
+                            <h4>Should:</h4>
+                            <ul>
+                                <li>
+                                    Have our own database to consolidate all other data sources into
+                                </li>
+                                <li>
+                                    Send notifications to users based on air quality and their quality preferences
+                                </li>
+                                <li>
+                                    Have synchronous and asynchronous connection to database
+                                </li>
+                                <li>
+                                    Store the last set of data offline in the app
+                                </li>
+                                <li>
+                                    Have clearly defined zones for the city
+                                </li>
+                            </ul>
+                            <h4>Could:</h4>
+                            <ul>
+                                <li>
+                                    Include social data eg twitter posts or facebook etc.
+                                </li>
+                                <li>
+                                    Include traffic data
+                                </li>
+                                <li>
+                                    Allow user to select which information they want to display
+                                </li>
+                            </ul>
+                            <h4>Would:</h4>
+                            <ul>
+                                <li>
+                                    Extend for use in other cities
+                                </li>
+                                <li>
+                                    Extend to a fully fledged android or web app for visualisations as well
+                                </li>
+                                <li>
+                                    Develop api for our database so others can use the data we have consolidated
+                                </li>
+                                <li>
+                                    Expand the number of data sources we are using
+                                </li>
                             </ul>
                         </section>
                         <section data-route="Research">
@@ -125,6 +177,10 @@
                         </section>
                         <section data-route="Git">
                             <h3>Github</h3>
+                            <paper-button class="fancy"  elevation="1" onclick="location.href='https://github.com/hennersz/PhyCompBackEnd';">Backend</paper-button>
+                            <br>
+                            <br>
+                            <paper-button class="fancy"  elevation="1" onclick="location.href='https://github.com/MingqianWang/SystemEngineeringProjectFrontEnd';">Frontend</paper-button>
                         </section>
                         <section data-route="Testing">
                             <h3>Testing</h3>
