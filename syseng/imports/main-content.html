@@ -44,6 +44,11 @@
               background: #45ada8;
               color:white;
         }
+        iframe {
+            width:100%;
+            height: 1550px;
+            border: 0px;
+        }
         </style>
         <paper-drawer-panel force-narrow disable-edge-swipe>
             <paper-header-panel id="menudrawer" mode="waterfall" class="flex" drawer>
@@ -171,6 +176,9 @@
                         </section>
                         <section data-route="Research">
                             <h3>Reseearch</h3>
+                            <code>
+                                var hello = 1;
+                            </code>
                         </section>
                          <section data-route="Prototypes">
                             <h3>Prototypes</h3>
@@ -187,6 +195,18 @@
                         </section>
                         <section data-route="Records">
                             <h3>Meetings and Bi-weekly Reports</h3>
+                            <paper-tabs selected="{{selected}}">
+                                <paper-tab>16/10/15</paper-tab>
+                                <paper-tab>30/10/15</paper-tab>
+                                <paper-tab>16/11/15</paper-tab>
+                                <paper-tab>27/11/15</paper-tab>
+                            </paper-tabs>
+                            <iron-pages selected="{{selected}}">
+                                <div><iframe src="https://docs.google.com/document/d/1wANFFlGew2pwdXGV9yCHckkyaX0nwy3VVj6af9OKaOg/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/1FXMtvkQTZS6_OVbKzRp2UDCXaPvQ0Kz5JALsoeu1PLs/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/1lc1LNIeqC1gr393G3XEaxB5F0VmRflWGAuT8MyYeB10/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/10F8B1KOEl2IyKasMfA8cqa25LmgQAIZgI8Vjv_NUcpY/pub?embedded=true"></iframe></div>
+                            </iron-pages>
                         </section>
                         <section data-route="Plan">
                             <h3>Plan for term 2</h3>
