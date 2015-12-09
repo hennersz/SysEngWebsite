@@ -8,7 +8,7 @@
         }
 
         #menudrawer, paper-menu{
-            background-color: #FA7921;
+            background-color: #2a363b;
             color: #FFF;
         }
         .content {
@@ -19,38 +19,242 @@
             border: 1px solid #F5F5F5;
             background-color: #FFFFFF;
         }
-        #maindrawer {
-            background-color: #FAFAFA;
+        .img-circle {
+                border-radius: 50%;
+                width:100%; /* you can use % */
+                height: auto;
         }
-    </style>
+        .profileText {
+            text-align: center;
+        }
+        .profile {
+            width:40%;
+            display:inline-block;
+        } 
+        #profileLeft{
+            margin-left:5%;
+        }
+        #profileRight{
+            margin-left:10%;
+        }
+        .pagetitle {
+            text-align:center;
+        }
+        paper-button.fancy {
+              background: #45ada8;
+              color:white;
+        }
+        iframe {
+            width:100%;
+            height: 1550px;
+            border: 0px;
+        }
+        code{
+            overflow: scroll;
+        </style>
         <paper-drawer-panel force-narrow disable-edge-swipe>
             <paper-header-panel id="menudrawer" mode="waterfall" class="flex" drawer>
                 <paper-toolbar header id="menu-toolbar">
-                    <div class="title">Menu</div>
+                    <div class="title" id="menu" >Menu</div>
                 </paper-toolbar>
                 <div class="container">
                     <paper-menu selected="{{route}}" valueattr="data-route">
                         <paper-item data-route="home">Home</paper-item>
-                        <paper-item data-route="project">Project Information</paper-item>
-                        <paper-item data-route="team">The Team</paper-item>
+                        <paper-item data-route="Background">Background</paper-item>
+                        <paper-item data-route="Requirements">Requirements</paper-item>
+                        <paper-item data-route="Research">Research</paper-item>
+                        <paper-item data-route="Prototypes">Prototypes</paper-item>
+                        <paper-item data-route="Git">Git Repository</paper-item>
+                        <paper-item data-route="Testing">Testing</paper-item>
+                        <paper-item data-route="Records">Meetings and Bi-weekly Reports</paper-item>
+                        <paper-item data-route="Plan">Plan for term 2</paper-item>
+                        
                     </paper-menu>
                 </div>
             </paper-header-panel>
-            <paper-header-panel id="maindrawer" mode="waterfall-tall" tall-class="medium-tall" main>
+            <paper-header-panel id="maindrawer" mode="waterfall" main>
                 <paper-toolbar role="tool" id="info-toolbar">
                     <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
-                    <div class="bottom title">Wearables Project Website Template</div>
+                    <div class="bottom title">Team 15 - INTEL1 Wearables project website</div>
                 </paper-toolbar>
                 <div class="content flex" id="content">
                     <iron-pages selected="{{route}}" valueattr="data-route" id="selector">
                         <section data-route="home">
-                            <h3>Hello and welcome to our website!</h3>
+                            <div class="pagetitle">
+                                <h3>The Team</h3>
+                            </div>
+                            <div class="profile" id="profileLeft">
+                                <img class="img-circle" src="./images/mingqian.jpg"/>
+                                <div class="profileText">
+                                    <h4>Minqian Wang</h4>
+                                </div>
+                            </div>
+                            <div class="profile" id="profileRight">
+                                <img class="img-circle" src="./images/henry.jpg"/>
+                                <div class="profileText">
+                                    <h4>Henry Mortimer</h4>
+                                </div>
+                            </div>
+ 
                         </section>
-                        <section data-route="project">
-                            <h3>Project Page</h3>
+                        <section data-route="Background">
+                            <div class="pagetitle">
+                                <h3>Background</h3>
+                            </div>
+                            <p>
+                                Nearly 9,500 people die in London every year due to long term exposure to air pollution. For the past 5 years London has been in breach of the EU NO2 safety limit. Because of this we have been tasked to design a smartwatch app that gets up to date data about the levels of air pollution as well as other forms of pollution so people can make more informed decisions about where in the city they go. Our clients are Nicolai Marquardt and Steve Houben. 
+                            </p> 
                         </section>
-                        <section data-route="team">
-                            <h3>Team Page</h3>
+                        <section data-route="Requirements">
+                            <div class="pagetitle">
+                                <h3>Requirements</h3>
+                            </div>
+                            <h4>Must:</h4>
+                            <ul>
+                                <li>
+                                    Use 3 pollution data sets updated at different rates ie live, daily, yearly
+                                </li>
+                                <li>
+                                    Display data visually on a smartwatch
+                                </li>
+                                <li>
+                                    Have a general view and a detailed view for each type of data
+                                </li>
+                                <li>
+                                    Interact with an android app
+                                </li>
+                                <li>
+                                    Must update as the user moves round the city and periodically or when the user requests a refresh
+                                </li>
+                                <li>
+                                    Have a clear simple UI
+                                </li>
+                            </ul>
+                            <h4>Should:</h4>
+                            <ul>
+                                <li>
+                                    Have our own database to consolidate all other data sources into
+                                </li>
+                                <li>
+                                    Send notifications to users based on air quality and their quality preferences
+                                </li>
+                                <li>
+                                    Have synchronous and asynchronous connection to database
+                                </li>
+                                <li>
+                                    Store the last set of data offline in the app
+                                </li>
+                                <li>
+                                    Have clearly defined zones for the city
+                                </li>
+                            </ul>
+                            <h4>Could:</h4>
+                            <ul>
+                                <li>
+                                    Include social data eg twitter posts or facebook etc.
+                                </li>
+                                <li>
+                                    Include traffic data
+                                </li>
+                                <li>
+                                    Allow user to select which information they want to display
+                                </li>
+                            </ul>
+                            <h4>Would:</h4>
+                            <ul>
+                                <li>
+                                    Extend for use in other cities
+                                </li>
+                                <li>
+                                    Extend to a fully fledged android or web app for visualisations as well
+                                </li>
+                                <li>
+                                    Develop api for our database so others can use the data we have consolidated
+                                </li>
+                                <li>
+                                    Expand the number of data sources we are using
+                                </li>
+                            </ul>
+                        </section>
+                        <section data-route="Research">
+                            <h3>Research</h3>
+                            <h4>Mingqian</h4>
+                            <h5>Reading</h5>
+                            <ul>
+                                <li><a href="http://www.oracle.com/technetwork/articles/java/json-1973242.html">Json parsing</a></li>
+                                <li><a href="https://developers.google.com/android/reference/com/google/android/gms/common/api/GoogleApiClient">Google API</a></li>
+                                <li><a href="https://developers.google.com/android/reference/com/google/android/gms/wearable/WearableListenerService?hl=en"> Wearables listeners</a></li>
+                            </ul>
+                            <h4>Henry</h4>
+                            <h5>Reading</h5>
+                            <ul>
+                                <li><a href="http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/">Connection node to express and a monog databse</a></li>
+                                <li><a href="http://api.erg.kcl.ac.uk/AirQuality/help">London air API docs</a></li>
+                                <li><a href="http://developer.smartcitizen.me">Smart citizen API docs</a></li>
+                            </ul>
+                        </section>
+                         <section data-route="Prototypes">
+                            <h3>Prototypes</h3>
+                            <h4>JSON parsing code</h4>
+                            <p><a href="./research/get_json.java">get_json.java</a></p>
+                            <h4>Mobile Main Activity</h4>
+                            <p><a href="./research/mobile/MainActivity.java">MainActivity.java</a></p>
+                            <h4>Wear Main Activity</h4>
+                            <p><a href="./research/wear/MainActivity.java">MainActivity.java</a></p>
+                            <h4>Wear Listener Service</h4>
+                            <p><a href="./research/wear/ListenerService.java">ListenerService.java</a></p>
+                            <h4>Node test app</h4>
+                            <p><a href="./nodetest2">Node test</a></p>
+                            <iron-image style="width:250px; height:500px;" sizing="contain" src="./images/file-page3.png"></iron-image>
+                            <iron-image style="width:250px; height:500px;" sizing="contain" src="./images/file-page2.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page1.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page4.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page5.png"></iron-image>
+                            
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-01.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-02.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-03.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-04.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-05.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-06.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-07.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-08.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-09.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-10.png"></iron-image>
+                        </section>
+                        <section data-route="Git">
+                            <h3>Github</h3>
+                            <paper-button class="fancy"  elevation="1" onclick="location.href='https://github.com/hennersz/PhyCompBackEnd';">Backend</paper-button>
+                            <br>
+                            <br>
+                            <paper-button class="fancy"  elevation="1" onclick="location.href='https://github.com/MingqianWang/SystemEngineeringProjectFrontEnd';">Frontend</paper-button>
+                        </section>
+                        <section data-route="Testing">
+                            <h3>Testing</h3>
+                            <h4>Javascript</h4>
+                            <p><a href="https://qunitjs.com">Qunit</a></p>
+                            <h4>Java</h4>
+                            <p><a href="http://junit.org">Junit</a></p>
+                        </section>
+                        <section data-route="Records">
+                            <h3>Meetings and Bi-weekly Reports</h3>
+                            <paper-tabs selected="{{selected}}">
+                                <paper-tab>16/10/15</paper-tab>
+                                <paper-tab>30/10/15</paper-tab>
+                                <paper-tab>16/11/15</paper-tab>
+                                <paper-tab>27/11/15</paper-tab>
+                            </paper-tabs>
+                            <iron-pages selected="{{selected}}">
+                                <div><iframe src="https://docs.google.com/document/d/1wANFFlGew2pwdXGV9yCHckkyaX0nwy3VVj6af9OKaOg/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/1FXMtvkQTZS6_OVbKzRp2UDCXaPvQ0Kz5JALsoeu1PLs/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/1lc1LNIeqC1gr393G3XEaxB5F0VmRflWGAuT8MyYeB10/pub?embedded=true"></iframe></div>
+                                <div><iframe src="https://docs.google.com/document/d/10F8B1KOEl2IyKasMfA8cqa25LmgQAIZgI8Vjv_NUcpY/pub?embedded=true"></iframe></div>
+                            </iron-pages>
+                        </section>
+                        <section data-route="Plan">
+                            <h3>Plan for term 2</h3>
+                            <p>In term 2 we will start the main production of the app. Minqian will work with Maddie from team 16 to work on the front end app which will use an android phone to request data from our backend server and then push the data to the views on the smartwatch app.</p>
+                            <p>Henry will work with Sri from team 16 to make the backend. This will be based on node and mongodb. It will get data from multiple data souces periodically and have our own RESTful api for the andorid app to connect to.</p>
                         </section>
                     </iron-pages>
                 </div>
