@@ -49,6 +49,8 @@
             height: 1550px;
             border: 0px;
         }
+        code{
+            overflow: scroll;
         </style>
         <paper-drawer-panel force-narrow disable-edge-swipe>
             <paper-header-panel id="menudrawer" mode="waterfall" class="flex" drawer>
@@ -175,13 +177,50 @@
                             </ul>
                         </section>
                         <section data-route="Research">
-                            <h3>Reseearch</h3>
-                            <code>
-                                var hello = 1;
-                            </code>
+                            <h3>Research</h3>
+                            <h4>Mingqian</h4>
+                            <h5>Reading</h5>
+                            <ul>
+                                <li><a href="http://www.oracle.com/technetwork/articles/java/json-1973242.html">Json parsing</a></li>
+                                <li><a href="https://developers.google.com/android/reference/com/google/android/gms/common/api/GoogleApiClient">Google API</a></li>
+                                <li><a href="https://developers.google.com/android/reference/com/google/android/gms/wearable/WearableListenerService?hl=en"> Wearables listeners</a></li>
+                            </ul>
+                            <h4>Henry</h4>
+                            <h5>Reading</h5>
+                            <ul>
+                                <li><a href="http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/">Connection node to express and a monog databse</a></li>
+                                <li><a href="http://api.erg.kcl.ac.uk/AirQuality/help">London air API docs</a></li>
+                                <li><a href="http://developer.smartcitizen.me">Smart citizen API docs</a></li>
+                            </ul>
                         </section>
                          <section data-route="Prototypes">
                             <h3>Prototypes</h3>
+                            <h4>JSON parsing code</h4>
+                            <p><a href="./research/get_json.java">get_json.java</a></p>
+                            <h4>Mobile Main Activity</h4>
+                            <p><a href="./research/mobile/MainActivity.java">MainActivity.java</a></p>
+                            <h4>Wear Main Activity</h4>
+                            <p><a href="./research/wear/MainActivity.java">MainActivity.java</a></p>
+                            <h4>Wear Listener Service</h4>
+                            <p><a href="./research/wear/ListenerService.java">ListenerService.java</a></p>
+                            <h4>Node test app</h4>
+                            <p><a href="./nodetest2">Node test</a></p>
+                            <iron-image style="width:250px; height:500px;" sizing="contain" src="./images/file-page3.png"></iron-image>
+                            <iron-image style="width:250px; height:500px;" sizing="contain" src="./images/file-page2.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page1.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page4.png"></iron-image>
+                            <iron-image style="width:250px; height:250px;" sizing="contain" src="./images/file-page5.png"></iron-image>
+                            
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-01.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-02.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-03.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-04.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-05.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-06.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-07.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-08.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-09.png"></iron-image>
+                            <iron-image style="width:1000px; height:1000px;" sizing="contain" src="./images/TeamMockups-10.png"></iron-image>
                         </section>
                         <section data-route="Git">
                             <h3>Github</h3>
@@ -192,6 +231,10 @@
                         </section>
                         <section data-route="Testing">
                             <h3>Testing</h3>
+                            <h4>Javascript</h4>
+                            <p><a href="https://qunitjs.com">Qunit</a></p>
+                            <h4>Java</h4>
+                            <p><a href="http://junit.org">Junit</a></p>
                         </section>
                         <section data-route="Records">
                             <h3>Meetings and Bi-weekly Reports</h3>
@@ -210,6 +253,8 @@
                         </section>
                         <section data-route="Plan">
                             <h3>Plan for term 2</h3>
+                            <p>In term 2 we will start the main production of the app. Minqian will work with Maddie from team 16 to work on the front end app which will use an android phone to request data from our backend server and then push the data to the views on the smartwatch app.</p>
+                            <p>Henry will work with Sri from team 16 to make the backend. This will be based on node and mongodb. It will get data from multiple data souces periodically and have our own RESTful api for the andorid app to connect to.</p>
                         </section>
                     </iron-pages>
                 </div>
