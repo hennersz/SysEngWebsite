@@ -1,5 +1,0 @@
-http://www.oracle.com/technetwork/articles/java/json-1973242.html
-
-https://developers.google.com/android/reference/com/google/android/gms/common/api/GoogleApiClient
-
-https://developers.google.com/android/reference/com/google/android/gms/wearable/WearableListenerService?hl=en
